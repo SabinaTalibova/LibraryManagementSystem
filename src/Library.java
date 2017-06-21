@@ -8,7 +8,7 @@ public class Library implements Serializable {
 	List<Book> collection;
 
 	public Library() {
-		List<Book> collection = new ArrayList<Book>();
+		 collection = new ArrayList<Book>();
 	}
 
 	public void addBooks(Book book) {
@@ -25,7 +25,7 @@ public class Library implements Serializable {
 
 		Iterator<Book> i = collection.iterator();
 		while (i.hasNext()) {
-			Book b = i.next();
+			Book b = (Book) i.next();
 			total = total + b.toString();
 		}
 		return total;
